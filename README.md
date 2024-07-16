@@ -29,7 +29,7 @@ This project calculates and visualizes the antipodal points of various locations
 
 ## License
 
-This project is licensed under the CC BY-ND (Attribution-NoDerivs). See the [LICENSE](LICENSE) file for more details.
+This project is licensed under the CC BY-ND (Attribution-NoDerivs). See the [LICENSE](LICENSE.md) file for more details.
 
 ## Contact
 
