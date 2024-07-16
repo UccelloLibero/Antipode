@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block title %}Antipode Finder{% endblock %}
+
+{% block content %}
+<h1>Antipode</h1>
+<form id="addressForm">
+    <div>
+        <input type="text" onfocus="this.value=''" id="address" name="address" placeholder="Enter address, city, town, or country">
+    </div>
+    <div>
+        <button type="submit">Find Antipode</button>
+    </div>
+</form>
+<p>Antipode is a tool that allows you to find the exact point on the Earth's surface diametrically opposite to any given location, as if you could dig a tunnel straight through the Earth's core.</p>
+<div id="coordinates">
+    <p><strong>Original Coordinates:</strong> <span id="original-coordinates"></span></p>
+    <p><strong>Antipode Coordinates:</strong> <span id="antipode-coordinates"></span></p>
+</div>
+<!-- <div id="map"></div> OpenStreetMap container -->
+<div id="cesiumContainer" style="width: 100%; height: 500px;"></div> <!-- CesiumJS container -->
+<div class="content">
+    <p>Any location on Earth can be described by two numbers: <strong>latitude</strong> and <strong>longitude</strong>.</p>
+    <div class="row">
+        <div class="col text-left">
+            <h4>Latitude</h4>
+            <p>In geography, latitude is a geographic coordinate that specifies the North-South position of a point on the Earth's surface; it is an angular distance north or south from Equator measured through 90 degrees. On the planet Earth, lines of latitude are circles of different size, and are often referred to as 'parallels'. The longest is the Equator, whose latitude is zero degrees (0°). The Equator divides the planet into a Northern and Southern Hemisphere, while at the poles -- North with latitude of 90° (or 90°N) and South with latitude of -90° (or 90°S) the circles shrink to a point.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col text-left">
+            <h4>Longitude</h4>
+            <p>Longitude is a geographic coordinate that specifies the East-West position of a point on the Earth's surface. On the globe, lines of constant longitude are called 'meridians' and they extend from pole to pole, like the segment boundaries on a peeled orange. Every meridian must cross the Equator. The imaginary, but very important, lines of longitude run from North Pole to the South Pole. Each is identified by the number of degrees it lies East or West of the 'prime meridian', which is in Greenwich England.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col text-left">
+            <h4>Antipodes</h4>
+            <p>In geography, the antipode of any spot on Earth is the point of Earth's surface diametrically opposite to it; the antipodes of a region similarly represent the area opposite to it. A pair of points antipodal to each other are situated such that a straight line connecting the two would pass through Earth's center. (<a href="https://en.wikipedia.org/wiki/Antipodes" target="_blank">More about antipodes on Wikipedia.</a>)</p>
+            <p>While working on this project I learned that the line of longitude, also called meridian, is derived from the Latin word 'meri', a variation of 'medius' which denotes 'middle' and 'diem' meaning 'day'. The word once meant 'noon' and times of the day before noon were known as 'ante meridian', while times after noon were known as 'post meridian'. It is said that today's English abbreviations a.m. and p.m. come from these terms, and the Sun at noon was said to be 'passing meridian'. All points on the same line of longitude experienced noon (and any other hour) at the same time and were therefore said to be on the same 'meridian line', which became 'meridian' for short.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <h4><a id="project-resources" target="_blank">Read more about Earth's Coordinates</a></h4>
+            <p>If you are interested in reading more about the Earth's coordinates and antipode and how they're used, here are links to several articles and other resources I've relied on while building this project.</p>
+            <p>Do you know that while most of the US antipodes are in the South Indian Ocean there are three spots of the continental US (one in Montana and two in Colorado) that match dry land, remote islands in Indian Ocean. Here is a fun read capturing this information with photos as well, <a href="https://www.usends.com/antipodes.html" target="_blank">US Ends.</a></p>
+            <p><a href="https://www-istp.gsfc.nasa.gov/stargaze/Slatlong.htm" target="_blank">About Earth's Coordinates by NASA</a>.</p>
+            <p>Encyclopedia Britannica article about <a href="https://www.britannica.com/science/latitude" target="_blank">Latitude and Longitude</a>.</p>
+            <p>Wikipedia: <a href="https://en.wikipedia.org/wiki/Geographic_coordinate_system" target="_blank">Geographic Coordinate System</a>.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
