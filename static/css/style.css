@@ -1,0 +1,108 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Fira Sans', sans-serif;
+    text-align: center;
+    background-color: #fbfcff;
+    color: #212121;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.navbar, .navbar-brand, .navbar-nav .nav-link {
+    /* background-color: #fbfcff; */
+    color: #212121;
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: #9bc13b;
+    color: #212121;
+}
+
+#addressForm {
+    margin-bottom: 20px;
+}
+
+input[type=text] {
+    margin: 10px 0 10px 0;
+    padding: 5px; 
+    border-radius: 0;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 100%;
+}
+
+button[type=submit] {
+    padding: 5px;
+    background-color: #9bc13b;
+    color: #212121;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+}
+
+button[type=submit]:hover {
+    background-color: #212121;
+    color: #fbfcff;
+    border-radius: 0;
+}
+
+#coordinates {
+    margin-bottom: 20px;
+}
+
+#map {
+    height: 500px;
+    width: 100%;
+}
+
+.content {
+    text-align: left;
+    margin: 20px;
+}
+
+.row {
+    margin: 20px 0;
+}
+
+.row .col {
+    margin: 20px 0;
+}
+
+footer.footer {
+    background-color: #9bc13b;
+    color: #212121;
+    padding: 20px;
+    margin-top: auto;
+    width: 100%;
+}
+
+a {
+    color: #212121;
+}
+
+a:hover {
+    color: #9bc13b;
+}
+
+.container {
+    flex: 1;
+}
+
+.tech-tools-list {
+    list-style-type: kannada;
+    margin: 5px;
+    padding: 5px;
+}
