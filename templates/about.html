@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}About Antipode{% endblock %}
+
+{% block content %}
+<h1>About Antipode</h1>
+<p>Antipode is a tool that allows you to find the exact point on the Earth's surface diametrically opposite to any given location, as if you could dig a tunnel straight through the Earth's core.</p>
+<p>This project was created to calculate and visualize the antipodal points of various locations on Earth. Using geographic coordinates, the application determines the exact point on the Earth's surface that is diametrically opposite to any given location.</p>
+<p>Latitude and longitude are used to describe any location on Earth, with latitude indicating the North-South position and longitude indicating the East-West position. The antipodal point is calculated by inverting the latitude and adjusting the longitude by 180 degrees.</p>
+
+<h2>Technologies Used</h2>
+<ul class="tech-tools-list">
+    <li><strong>Python:</strong> The core programming language used for the backend logic.</li>
+    <li><strong>Flask:</strong> A lightweight WSGI web application framework used to create the web application.</li>
+    <li><strong>GeoPy:</strong> A Python client for several popular geocoding web services used to convert addresses into geographic coordinates.</li>
+    <li><strong>Jinja2:</strong> A templating engine for Python, used by Flask to render HTML templates.</li>
+    <li><strong>HTML5:</strong> The standard markup language used for creating web pages.</li>
+    <li><strong>CSS3:</strong> The style sheet language used for describing the presentation of the web pages.</li>
+    <li><strong>Bootstrap:</strong> A front-end framework used for responsive web design and styling.</li>
+    <li><strong>JavaScript:</strong> The programming language used for client-side scripting.</li>
+    <li><strong>jQuery:</strong> A fast, small, and feature-rich JavaScript library used to simplify the client-side scripting.</li>
+    <li><strong>CesiumJS:</strong> A JavaScript library for creating 3D globes and maps.</li>
+    <li><strong>OpenStreetMap:</strong> An open-source project that provides free geographic data and map imagery, used as the imagery provider for the map.</li>
+</ul>
+
+<h2>Flask and Template Rendering</h2>
+<p>This project uses Flask, a lightweight web application framework for Python, to handle the backend logic and serve the web pages. Flask uses the Jinja2 templating engine to dynamically generate HTML content. Template rendering allows the separation of HTML (presentation) from Python code (logic), making the application more modular and easier to maintain.</p>
+<p>In this project, templates are HTML files that include placeholders for dynamic content. These placeholders are replaced with actual data when the template is rendered, allowing the web pages to be dynamically generated based on user input and other data.</p>
+
+<h2>Project History</h2>
+<p>See the project's build history on GitHub: <a href="https://github.com/UccelloLibero/Antipode" target="_blank">Antipode GitHub Repository</a>.</p>
+
+<h2>Deployment</h2>
+<p>This project is deployed on Heroku. You can access it at: <a href="#" target="_blank">Antipode on Heroku</a>.</p>
+
+<p>This project uses <a href="https://cesium.com" target="_blank">CisiumJS</a> for the 3D globe visualization and <a href="https://www.openstreetmap.org/about" target="_blank">OpenStreetMap</a> as the imagery provider. <a href="https://flask.palletsprojects.com/en/3.0.x/" target="_blank">Flask</a> is used for the backend service, and <a href="https://geopy.readthedocs.io/en/stable/" target="_blank">GeoPy</a> is used to convert addresses to geographic coordinates.</p>
+
+<h2>License</h2>
+<p>This project is licensed under the CC BY-ND (Attribution-NoDerivs). See the <a href="https://github.com/UccelloLibero/Antipode/blob/main/LICENSE.md" target="_blank">LICENSE</a> file for more details.</p>
+{% endblock %}
