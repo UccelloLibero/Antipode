@@ -27,11 +27,9 @@ $(document).ready(function() {
                     text: `Original Location: ${address}`,
                     font: '14pt sans-serif',
                     fillColor: Cesium.Color.BLACK,
-                    style: Cesium.LabelStyle.fillColorE,
-                    // outlineColor: Cesium.Color.BLACK,
-                    // outlineWidth: 1, // Reduce outline width for clarity
+                    style: Cesium.LabelStyle.FILL,
                     verticalOrigin: Cesium.VerticalOrigin.BOTTOM,
-                    pixelOffset: new Cesium.Cartesian2(0, -9)
+                    pixelOffset: new Cesium.Cartesian2(0, -10) // Adjusted for consistency
                 }
             });
 
@@ -42,11 +40,9 @@ $(document).ready(function() {
                     text: 'Antipode Location',
                     font: '14pt sans-serif',
                     fillColor: Cesium.Color.BLACK,
-                    style: Cesium.LabelStyle.fillColor,
-                    // outlineColor: Cesium.Color.BLACK,
-                    // outlineWidth: 1, // Reduce outline width for clarity
+                    style: Cesium.LabelStyle.FILL,
                     verticalOrigin: Cesium.VerticalOrigin.BOTTOM,
-                    pixelOffset: new Cesium.Cartesian2(0, -9)
+                    pixelOffset: new Cesium.Cartesian2(0, -10) // Adjusted for consistency
                 }
             });
 
