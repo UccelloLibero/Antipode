@@ -26,10 +26,10 @@ $(document).ready(function() {
                 label: {
                     text: `Original Location: ${address}`,
                     font: '14pt sans-serif',
-                    fillColor: Cesium.Color.WHITE,
-                    style: Cesium.LabelStyle.FILL_AND_OUTLINE,
-                    outlineColor: Cesium.Color.BLACK,
-                    outlineWidth: 1, // Reduce outline width for clarity
+                    fillColor: Cesium.Color.BLACK,
+                    style: Cesium.LabelStyle.fillColorE,
+                    // outlineColor: Cesium.Color.BLACK,
+                    // outlineWidth: 1, // Reduce outline width for clarity
                     verticalOrigin: Cesium.VerticalOrigin.BOTTOM,
                     pixelOffset: new Cesium.Cartesian2(0, -9)
                 }
@@ -41,10 +41,10 @@ $(document).ready(function() {
                 label: {
                     text: 'Antipode Location',
                     font: '14pt sans-serif',
-                    fillColor: Cesium.Color.WHITE,
-                    style: Cesium.LabelStyle.FILL_AND_OUTLINE,
-                    outlineColor: Cesium.Color.BLACK,
-                    outlineWidth: 1, // Reduce outline width for clarity
+                    fillColor: Cesium.Color.BLACK,
+                    style: Cesium.LabelStyle.fillColor,
+                    // outlineColor: Cesium.Color.BLACK,
+                    // outlineWidth: 1, // Reduce outline width for clarity
                     verticalOrigin: Cesium.VerticalOrigin.BOTTOM,
                     pixelOffset: new Cesium.Cartesian2(0, -9)
                 }
