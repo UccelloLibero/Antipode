@@ -7,8 +7,17 @@ $(document).ready(function() {
                 url : 'https://a.tile.openstreetmap.org/'
             }),
             baseLayerPicker: false,
-            geocoder: false
+            geocoder: false,
+            useDefaultRenderLoop: false, // Disable the default render loop
+            resolutionScale: 1.0,
+            fxaa: false, // Disable FXAA
         });
+
+        // Manually start the render loop
+        viewer.useDefaultRenderLoop = true;
+
+        // Disable FXAA after viewer initialization
+        viewer.scene.postProcessStages.fxaa.enabled = false;
 
         var markers = [];
 
@@ -17,19 +26,27 @@ $(document).ready(function() {
             markers = [];
         };
 
+        const isMobileDevice = () => {
+            return /Mobi|Android/i.test(navigator.userAgent);
+        };
+
         const updateMap = (lat, lon, antipodeLat, antipodeLon, address) => {
             clearMarkers();
+
+            const fontSize = isMobileDevice() ? '12pt Arial' : '16pt Arial';
+            const pixelOffset = isMobileDevice() ? new Cesium.Cartesian2(0, -5) : new Cesium.Cartesian2(0, -10);
+            const fillColor = isMobileDevice() ? Cesium.Color.BLACK : Cesium.Color.BLACK;
 
             var originalMarker = viewer.entities.add({
                 position: Cesium.Cartesian3.fromDegrees(lon, lat),
                 point: { pixelSize: 10, color: Cesium.Color.RED },
                 label: {
                     text: `Original Location: ${address}`,
-                    font: '16pt Arial',
-                    fillColor: Cesium.Color.BLACK,
+                    font: fontSize,
+                    fillColor: fillColor,
                     style: Cesium.LabelStyle.FILL,
                     verticalOrigin: Cesium.VerticalOrigin.BOTTOM,
-                    pixelOffset: new Cesium.Cartesian2(0, -2) // Reduce pixel offset for browser consistency
+                    pixelOffset: pixelOffset
                 }
             });
 
@@ -38,11 +55,11 @@ $(document).ready(function() {
                 point: { pixelSize: 10, color: Cesium.Color.BLUE },
                 label: {
                     text: 'Antipode Location',
-                    font: '16pt Arial',
-                    fillColor: Cesium.Color.BLACK,
+                    font: fontSize,
+                    fillColor: fillColor,
                     style: Cesium.LabelStyle.FILL,
                     verticalOrigin: Cesium.VerticalOrigin.BOTTOM,
-                    pixelOffset: new Cesium.Cartesian2(0, -2) // Reduce pixel offset for browser consistency
+                    pixelOffset: pixelOffset
                 }
             });
 
