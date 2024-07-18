@@ -5,6 +5,7 @@ Antipode is a tool that allows you to find the exact point on the Earth's surfac
 ## Table of Contents
 - [Overview](#overview)
 - [Technologies Used](#technologies-used)
+- [Deployment](#deployment)
 - [License](#license)
 - [Contact](#contact)
 
@@ -26,6 +27,9 @@ This project calculates and visualizes the antipodal points of various locations
 - **CesiumJS**: A JavaScript library for creating 3D globes and maps, used for the map visualization.
 - **OpenStreetMap**: An open-source project that provides free geographic data and map imagery, used as the imagery provider for the map.
 
+## Deployment
+
+This project is deployed on Heroku. You can access it at [Antipode](https://antipode-a2cbdc24a665.herokuapp.com/).
 
 ## License
 

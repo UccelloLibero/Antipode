@@ -27,7 +27,7 @@ $(document).ready(function() {
                 point: { pixelSize: 10, color: Cesium.Color.RED },
                 label: {
                     text: `Original Location: ${address}`,
-                    font: 'bold 18pt Helvetica', // Using Helvetica for better compatibility
+                    font: 'bold 700 20pt Helvetica', // Using Helvetica for better compatibility
                     fillColor: Cesium.Color.BLACK,
                     style: Cesium.LabelStyle.FILL,
                     verticalOrigin: Cesium.VerticalOrigin.BOTTOM,
@@ -40,7 +40,7 @@ $(document).ready(function() {
                 point: { pixelSize: 10, color: Cesium.Color.BLUE },
                 label: {
                     text: 'Antipode Location',
-                    font: 'bold 18pt Helvetica', // Using Helvetica for better compatibility
+                    font: 'bold 700 20pt Helvetica', // Using Helvetica for better compatibility
                     fillColor: Cesium.Color.BLACK,
                     style: Cesium.LabelStyle.FILL,
                     verticalOrigin: Cesium.VerticalOrigin.BOTTOM,
