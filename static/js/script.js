@@ -28,7 +28,8 @@ $(document).ready(function() {
                     font: '14pt sans-serif',
                     fillColor: Cesium.Color.WHITE,
                     style: Cesium.LabelStyle.FILL_AND_OUTLINE,
-                    outlineWidth: 2,
+                    outlineColor: Cesium.Color.BLACK,
+                    outlineWidth: 1, // Reduce outline width for clarity
                     verticalOrigin: Cesium.VerticalOrigin.BOTTOM,
                     pixelOffset: new Cesium.Cartesian2(0, -9)
                 }
@@ -42,14 +43,14 @@ $(document).ready(function() {
                     font: '14pt sans-serif',
                     fillColor: Cesium.Color.WHITE,
                     style: Cesium.LabelStyle.FILL_AND_OUTLINE,
-                    outlineWidth: 2,
+                    outlineColor: Cesium.Color.BLACK,
+                    outlineWidth: 1, // Reduce outline width for clarity
                     verticalOrigin: Cesium.VerticalOrigin.BOTTOM,
                     pixelOffset: new Cesium.Cartesian2(0, -9)
                 }
             });
 
             markers.push(originalMarker, antipodeMarker);
-
 
             viewer.camera.flyTo({
                 destination: Cesium.Cartesian3.fromDegrees(lon, lat, 10000000), // Fly to original location
@@ -63,7 +64,6 @@ $(document).ready(function() {
             });
         };
 
-           
         $('#addressForm').on('submit', function(event) {
             event.preventDefault();
             const address = $('#address').val();
