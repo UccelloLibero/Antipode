@@ -7,7 +7,9 @@ $(document).ready(function() {
                 url : 'https://a.tile.openstreetmap.org/'
             }),
             baseLayerPicker: false,
-            geocoder: false
+            geocoder: false,
+            resolutionScale: window.devicePixelRatio // Increase resolution scale for sharper rendering
+
         });
 
         var markers = [];
@@ -25,11 +27,11 @@ $(document).ready(function() {
                 point: { pixelSize: 10, color: Cesium.Color.RED },
                 label: {
                     text: `Original Location: ${address}`,
-                    font: '16pt Arial', // Use Arial for better compatibility
+                    font: '18pt Helvetica', // Using Helvetica for better compatibility
                     fillColor: Cesium.Color.BLACK,
                     style: Cesium.LabelStyle.FILL,
                     verticalOrigin: Cesium.VerticalOrigin.BOTTOM,
-                    pixelOffset: new Cesium.Cartesian2(0, 5) // Adjust offset
+                    pixelOffset: new Cesium.Cartesian2(0, -8) // Adjust offset
                 }
             });
 
@@ -38,11 +40,11 @@ $(document).ready(function() {
                 point: { pixelSize: 10, color: Cesium.Color.BLUE },
                 label: {
                     text: 'Antipode Location',
-                    font: '16pt Arial', // Use Arial for better compatibility
+                    font: '18pt Helvetica', // Using Helvetica for better compatibility
                     fillColor: Cesium.Color.BLACK,
                     style: Cesium.LabelStyle.FILL,
                     verticalOrigin: Cesium.VerticalOrigin.BOTTOM,
-                    pixelOffset: new Cesium.Cartesian2(0, 5) // Adjust offset
+                    pixelOffset: new Cesium.Cartesian2(0, -8) // Adjust offset of label to marker
                 }
             });
 
