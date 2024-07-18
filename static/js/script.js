@@ -25,11 +25,11 @@ $(document).ready(function() {
                 point: { pixelSize: 10, color: Cesium.Color.RED },
                 label: {
                     text: `Original Location: ${address}`,
-                    font: '14pt sans-serif',
+                    font: '16pt Arial',
                     fillColor: Cesium.Color.BLACK,
                     style: Cesium.LabelStyle.FILL,
                     verticalOrigin: Cesium.VerticalOrigin.BOTTOM,
-                    pixelOffset: new Cesium.Cartesian2(0, -10) // Adjusted for consistency
+                    pixelOffset: new Cesium.Cartesian2(0, -2) // Reduce pixel offset for browser consistency
                 }
             });
 
@@ -38,11 +38,11 @@ $(document).ready(function() {
                 point: { pixelSize: 10, color: Cesium.Color.BLUE },
                 label: {
                     text: 'Antipode Location',
-                    font: '14pt sans-serif',
+                    font: '16pt Arial',
                     fillColor: Cesium.Color.BLACK,
                     style: Cesium.LabelStyle.FILL,
                     verticalOrigin: Cesium.VerticalOrigin.BOTTOM,
-                    pixelOffset: new Cesium.Cartesian2(0, -10) // Adjusted for consistency
+                    pixelOffset: new Cesium.Cartesian2(0, -2) // Reduce pixel offset for browser consistency
                 }
             });
 
