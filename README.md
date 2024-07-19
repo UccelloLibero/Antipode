@@ -29,7 +29,7 @@ This project calculates and visualizes the antipodal points of various locations
 
 ## Deployment
 
-This project is deployed on Heroku. You can access it at [Antipode](https://antipode-a2cbdc24a665.herokuapp.com/).
+This project is deployed on Heroku. You can access it here: [Antipode](https://antipode.mcpherson.io).
 
 ## License
 
