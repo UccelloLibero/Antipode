@@ -1,5 +1,7 @@
 # Antipode
 
+![Screenshot of Antipode](static/Antipode1.png)
+
 Antipode is a tool that allows you to find the exact point on the Earth's surface diametrically opposite to any given location, as if you could dig a tunnel straight through the Earth's core.
 
 ## Table of Contents
